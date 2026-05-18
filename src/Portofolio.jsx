@@ -749,16 +749,8 @@ const Portofolio = () => {
                   key={idx}
                   className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-colors"
                 >
-                  <div className="grid lg:grid-cols-5 gap-0">
-                    <div className="lg:col-span-2 relative h-56 lg:h-auto overflow-hidden">
-                      <img
-                        src={cs.image}
-                        alt={cs.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/40 via-transparent to-cyan-900/20"></div>
-                    </div>
-                    <div className="lg:col-span-3 p-6 sm:p-8">
+                  <div>
+                    <div className="p-6 sm:p-8">
                       <p className="text-xs font-mono text-cyan-400 mb-2">{cs.role}</p>
                       <h3 className="text-2xl font-bold text-white mb-4">{cs.title}</h3>
 

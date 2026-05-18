@@ -1,99 +1,120 @@
-# Portofolio — Ghany Abdillah Ersa
+<div align="center">
 
-Situs portofolio pribadi yang menampilkan profil, pengalaman kerja, karya, keahlian teknis, dan penghargaan. Dibangun dengan **React + Vite + Tailwind CSS** dengan desain *dark mode* yang modern, responsif, dan minimalis.
+# Ghany Abdillah Ersa — Portfolio
 
-> Live preview: _belum ter-deploy — lihat petunjuk pengembangan lokal di bawah._
+A modern, responsive personal portfolio showcasing experience, projects, technical expertise, and recognitions. Built with a clean dark-mode aesthetic and a fully content-driven architecture.
+
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38BDF8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Deploy](https://img.shields.io/badge/GitHub_Pages-Live-222?logo=github)](https://ghanyersa.github.io/ghany-folio/)
+[![License](https://img.shields.io/badge/License-Personal_Use-lightgrey)](#license)
+
+[Live Demo](https://ghanyersa.github.io/ghany-folio/) · [Report an issue](https://github.com/ghanyersa/ghany-folio/issues) · [Connect on LinkedIn](https://www.linkedin.com/in/ghany-abdillah-ersa-06156013a)
+
+</div>
 
 ---
 
-## Sekilas
+## About
 
-- **Nama**: Ghany Abdillah Ersa
-- **Peran**: Fullstack JavaScript Engineer (Frontend-focused)
-- **Pengalaman**: 5+ tahun
-- **Domisili**: Jawa Timur, Indonesia
-- **Kontak**: [ghanyersa24@gmail.com](mailto:ghanyersa24@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ghany-abdillah-ersa-06156013a)
+This site presents a curated overview of my work as a **Fullstack JavaScript Engineer** with a frontend focus. It is engineered to be fast, accessible, and trivial to maintain — content lives in a single source of truth, assets are centralized through a manifest, and the production build is optimized for static hosting.
+
+| | |
+| --- | --- |
+| **Name** | Ghany Abdillah Ersa |
+| **Role** | Fullstack JavaScript Engineer (Frontend-focused) |
+| **Experience** | 5+ years |
+| **Location** | East Java, Indonesia |
+| **Email** | [ghanyersa24@gmail.com](mailto:ghanyersa24@gmail.com) |
+| **LinkedIn** | [ghany-abdillah-ersa](https://www.linkedin.com/in/ghany-abdillah-ersa-06156013a) |
 
 ---
 
-## Fitur
+## Highlights
 
-- **Single-page** dengan navigasi *smooth scroll* dan indikator section aktif.
-- **Responsive design** — tampil rapi dari mobile, tablet, hingga desktop.
-- **Timeline pengalaman** yang menggabungkan riwayat kerja dengan kartu proyek terkait.
-- **Galeri penghargaan** dengan ilustrasi visual.
-- **Mobile drawer menu** dengan animasi transisi.
-- **Aset gambar terpusat** lewat manifest, mudah diganti tanpa menyentuh komponen.
+- **Single-page architecture** with smooth-scroll navigation and an active-section indicator.
+- **Fully responsive** — refined layouts from mobile to ultrawide displays.
+- **Experience timeline** that pairs work history with related project cards.
+- **Awards gallery** with visual storytelling.
+- **Animated mobile drawer** for a polished navigation experience.
+- **Centralized asset manifest** — swap images without touching component code.
+- **Zero-config deployment** to GitHub Pages via GitHub Actions.
 
 ---
 
 ## Tech Stack
 
-| Lapisan        | Teknologi                              |
-| -------------- | -------------------------------------- |
-| Framework      | [React 18](https://react.dev/)         |
-| Build Tool     | [Vite 5](https://vitejs.dev/)          |
-| Styling        | [Tailwind CSS 3](https://tailwindcss.com/) |
-| Ikon           | [lucide-react](https://lucide.dev/)    |
-| Tipografi      | Inter & JetBrains Mono (Google Fonts)  |
+| Layer | Technology |
+| --- | --- |
+| Framework | [React 18](https://react.dev/) |
+| Build Tool | [Vite 5](https://vitejs.dev/) |
+| Styling | [Tailwind CSS 3](https://tailwindcss.com/) |
+| Icons | [lucide-react](https://lucide.dev/) |
+| Typography | Inter & JetBrains Mono (Google Fonts) |
+| Hosting | GitHub Pages (via GitHub Actions) |
 
 ---
 
-## Memulai
+## Getting Started
 
-### Prasyarat
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) v18 atau lebih baru
-- npm (bundled dengan Node) atau pnpm/yarn
+- [Node.js](https://nodejs.org/) **v18 or newer**
+- npm (bundled with Node) — pnpm or yarn also supported
 
-### Instalasi & Menjalankan
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/ghanyersa/ghany-folio.git
+cd ghany-folio
+
 # Install dependencies
 npm install
-
-# Jalankan dev server (otomatis buka browser di http://localhost:5173)
-npm run dev
-
-# Build production (output ke folder dist/)
-npm run build
-
-# Preview hasil build secara lokal
-npm run preview
 ```
+
+### Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server at `http://localhost:5173` |
+| `npm run build` | Build the production bundle into `dist/` |
+| `npm run preview` | Preview the production build locally |
 
 ---
 
-## Struktur Project
+## Project Structure
 
 ```
-porto/
-├── index.html              # Entry HTML + preload Google Fonts
-├── package.json
-├── vite.config.js          # Konfigurasi Vite
-├── tailwind.config.js      # Konfigurasi Tailwind (font family, content paths)
+ghany-folio/
+├── .github/workflows/
+│   └── static.yml             # GitHub Pages deployment workflow
+├── index.html                 # Entry HTML + Google Fonts preload
+├── vite.config.js             # Vite configuration
+├── tailwind.config.js         # Tailwind theme & content paths
 ├── postcss.config.js
 └── src/
-    ├── main.jsx            # React root, render <Portofolio />
-    ├── index.css           # Tailwind directives + base styles
-    ├── Portofolio.jsx      # Komponen utama portofolio
+    ├── main.jsx               # React root — mounts <Portofolio />
+    ├── index.css              # Tailwind directives + base styles
+    ├── Portofolio.jsx         # Primary portfolio component
     └── assets/
         └── images/
-            ├── index.js    # Manifest gambar (URL mapping)
-            ├── projects/   # Gambar proyek (drop file di sini)
-            └── awards/     # Gambar penghargaan (drop file di sini)
+            ├── index.js       # Image manifest (single source of truth)
+            ├── projects/      # Project imagery
+            └── awards/        # Award imagery
 ```
 
 ---
 
-## Mengganti Aset Gambar
+## Managing Assets
 
-Semua gambar di-resolve lewat satu file: [src/assets/images/index.js](src/assets/images/index.js). Saat ini menggunakan URL Unsplash sebagai *placeholder*.
+All images resolve through one entry point: [src/assets/images/index.js](src/assets/images/index.js). Placeholders currently reference Unsplash URLs.
 
-Untuk mengganti dengan file lokal Anda:
+To replace placeholders with local files:
 
-1. Taruh file di folder yang sesuai (`projects/` atau `awards/`).
-2. Edit [src/assets/images/index.js](src/assets/images/index.js):
+1. Drop the asset into the appropriate folder (`projects/` or `awards/`).
+2. Update the manifest at [src/assets/images/index.js](src/assets/images/index.js):
 
    ```js
    import talentics from './projects/talentics.jpg';
@@ -110,38 +131,56 @@ Untuk mengganti dengan file lokal Anda:
    };
    ```
 
-3. Komponen [src/Portofolio.jsx](src/Portofolio.jsx) **tidak perlu disentuh** — Vite otomatis akan men-*hash*, mengoptimalkan, dan mem-*bundle* aset.
+3. No changes are required in [src/Portofolio.jsx](src/Portofolio.jsx) — Vite will hash, optimize, and bundle the assets automatically.
 
-### Key gambar yang tersedia
+### Available Image Keys
 
-| Kategori | Key                 | Digunakan untuk                   |
-| -------- | ------------------- | --------------------------------- |
-| Project  | `talentics`         | Sekolah.mu / talentics.id         |
-| Project  | `fifgroup`          | FIFGROUP (ASTRA)                  |
-| Project  | `shiftacademy`      | Peopleshift / shiftacademy.id     |
-| Project  | `bigio`             | PT Bejana Investidata (BIGIO.ID)  |
-| Project  | `emApps`            | EM Apps — UB                      |
-| Award    | `topLeaderOlf`      | Top 50 Leader — OLF               |
-| Award    | `businessPlan`      | Juara 2 Business Plan             |
-| Award    | `teknologiInovasi`  | Juara 2 Teknologi Inovasi         |
-| Award    | `bmcJatimOpen`      | Juara 1 BMC — Jatim Open 2023     |
-
----
-
-## Memperbarui Konten
-
-Data (pengalaman, pendidikan, keahlian, penghargaan) didefinisikan sebagai array di dalam [src/Portofolio.jsx](src/Portofolio.jsx):
-
-- `navItems` — item navigasi atas
-- `experiences` — timeline pengalaman + proyek terkait
-- `education` — riwayat pendidikan
-- `skills` — kelompok keahlian teknis
-- `awards` — penghargaan & kepemimpinan
-
-Cukup edit array tersebut untuk mengganti konten — tidak perlu menyentuh markup JSX di bawahnya.
+| Category | Key | Used For |
+| --- | --- | --- |
+| Project | `talentics` | Sekolah.mu / talentics.id |
+| Project | `fifgroup` | FIFGROUP (ASTRA) |
+| Project | `shiftacademy` | Peopleshift / shiftacademy.id |
+| Project | `bigio` | PT Bejana Investidata (BIGIO.ID) |
+| Project | `emApps` | EM Apps — Universitas Brawijaya |
+| Award | `topLeaderOlf` | Top 50 Leader — OLF |
+| Award | `businessPlan` | 2nd Place — Business Plan |
+| Award | `teknologiInovasi` | 2nd Place — Teknologi Inovasi |
+| Award | `bmcJatimOpen` | 1st Place — BMC Jatim Open 2023 |
 
 ---
 
-## Lisensi
+## Updating Content
 
-© 2024 Ghany Abdillah Ersa. Konten dan aset visual untuk keperluan portofolio pribadi.
+All portfolio data lives in well-named arrays inside [src/Portofolio.jsx](src/Portofolio.jsx):
+
+| Array | Purpose |
+| --- | --- |
+| `navItems` | Top navigation items |
+| `experiences` | Work history & related projects |
+| `education` | Education history |
+| `skills` | Grouped technical expertise |
+| `awards` | Awards & leadership achievements |
+
+Edit these arrays to update content — JSX markup below them does not need to be modified.
+
+---
+
+## Deployment
+
+The site deploys automatically to **GitHub Pages** through the workflow at [.github/workflows/static.yml](.github/workflows/static.yml) on every push to `main`.
+
+The `base` path is configured in [vite.config.js](vite.config.js) to match the repository name. If forking, update the `base` value accordingly.
+
+---
+
+## License
+
+© 2024–2026 Ghany Abdillah Ersa. All content and visual assets are intended for personal portfolio use.
+
+---
+
+<div align="center">
+
+**Crafted with care — feedback and collaboration are always welcome.**
+
+</div>

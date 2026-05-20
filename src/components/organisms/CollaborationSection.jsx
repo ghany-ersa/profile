@@ -45,7 +45,7 @@ export default function CollaborationSection() {
           align="center"
           eyebrow="Let's move faster together"
           eyebrowIcon={Handshake}
-          title="Siap Percepat Organisasi Anda?"
+          title="Siap Mulai Proyek Bersama?"
           description="Ada proses yang terasa lambat, sistem yang belum terintegrasi, atau peluang otomasi yang belum tersentuh? Saya terbuka untuk diskusi - proyek penuh waktu, kontrak, freelance, atau konsultasi jangka pendek."
           className="mb-16"
         />

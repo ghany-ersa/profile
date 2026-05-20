@@ -10,7 +10,7 @@ import { TechTag } from '../atoms';
 export default function ProjectCard({ project }) {
   return (
     <div className="mt-6 bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col sm:flex-row group/project hover:border-cyan-900 transition-colors duration-300">
-      <div className="sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+      <div className="sm:w-2/5 h-48 sm:h-auto sm:max-h-56 relative overflow-hidden">
         <img
           src={project.image}
           alt={project.title}

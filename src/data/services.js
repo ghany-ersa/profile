@@ -4,21 +4,21 @@ export const services = [
     icon: 'layout',
     title: 'Frontend Engineering',
     description:
-      'Membangun antarmuka web modern berbasis Vue/Nuxt atau React - fokus pada performa, aksesibilitas, dan maintainability.',
+      'Saya bantu wujudkan tampilan web yang tidak hanya cantik, tapi juga cepat, nyaman dipakai, dan mudah dikembangkan ke depannya.',
     points: ['Vue / Nuxt / React', 'Design system & UI yang reusable', 'Optimasi performa & Core Web Vitals'],
   },
   {
     icon: 'wrench',
     title: 'Fullstack Product Build',
     description:
-      'Membantu founder & tim kecil merilis MVP atau internal tools dari nol - UI, REST API, database, hingga deployment.',
-    points: ['Express.js / Spring Boot', 'REST API & arsitektur multi-tenant', 'Integrasi payment gateway & 3rd-party'],
+      'Punya ide produk atau butuh tools internal? Saya bisa bantu dari nol sampai jalan — UI, API, database, sampai siap pakai.',
+    points: ['Express.js / Laravel', 'REST API & arsitektur multi-tenant', 'Integrasi payment gateway & 3rd-party'],
   },
   {
     icon: 'graduation',
     title: 'Mentoring & Tech Workshop',
     description:
-      '500+ jam pengalaman mengajar bootcamp. Cocok untuk onboarding engineer baru, internal workshop, atau bimbingan project.',
+      'Lebih dari 500 jam mendampingi orang belajar ngoding. Baik untuk onboarding tim, workshop internal, atau sekadar butuh teman diskusi teknis.',
     points: ['Kurikulum praktis berbasis project', 'Code review & pair programming', 'Webinar / in-house training'],
   },
 ];

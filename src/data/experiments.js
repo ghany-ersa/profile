@@ -19,4 +19,19 @@ export const experiments = [
     ],
     note: 'Butuh izin kamera & koneksi internet untuk memuat model hand tracking.',
   },
+  {
+    icon: 'puzzle',
+    title: 'WA Blast - Chrome Extension',
+    tagline: 'Kirim pesan WhatsApp massal langsung dari browser.',
+    description:
+      'Chrome extension untuk mengirim pesan WhatsApp ke banyak kontak sekaligus tanpa perlu tool pihak ketiga. Memanfaatkan WhatsApp Web API yang berjalan di browser, lengkap dengan antarmuka yang simpel untuk input daftar nomor dan pesan kustom.',
+    stack: ['Chrome Extension', 'JavaScript', 'WhatsApp Web', 'HTML', 'CSS'],
+    links: [
+      {
+        label: 'Chrome Web Store',
+        href: 'https://chromewebstore.google.com/detail/mlacfalphoimakgnnlgkmchacncflech',
+      },
+    ],
+    note: 'Pastikan sudah login ke WhatsApp Web sebelum menggunakan extension ini.',
+  },
 ];

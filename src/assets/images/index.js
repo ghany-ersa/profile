@@ -9,6 +9,7 @@ import talentics from './projects/talentics.png';
 import comika from './projects/comika.png';
 import shiftacademy from './projects/shiftacademy.jpg';
 import nikaah from './projects/nikaahid.jpg';
+import emapps from './projects/emapps.jpg';
 
 // Foto profil:
 // 1. Taruh file di src/assets/images/profile/ (mis. ghany.jpg)
@@ -27,6 +28,5 @@ export const projectImages = {
   nikaah,
   bigio:
     'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop',
-  emApps:
-    'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop',
+  emApps: emapps,
 };

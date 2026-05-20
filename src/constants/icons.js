@@ -33,6 +33,7 @@ import {
   FlaskConical,
   ExternalLink,
   Hand,
+  Puzzle,
 } from 'lucide-react';
 
 const icons = {
@@ -67,6 +68,7 @@ const icons = {
   flask: FlaskConical,
   externalLink: ExternalLink,
   hand: Hand,
+  puzzle: Puzzle,
 };
 
 // Resolve an icon name to its component. Falls back to a visible default

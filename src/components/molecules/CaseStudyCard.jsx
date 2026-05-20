@@ -16,8 +16,9 @@ function BlockLabel({ icon: Icon, color, children }) {
  *
  * @param {object} caseStudy - an item from data/caseStudies.js
  */
-export default function CaseStudyCard({ caseStudy }) {
+export default function CaseStudyCard({ caseStudy, t = {} }) {
   const { role, title, problem, action, decisions, result, stack } = caseStudy;
+  const keyDecisionsLabel = t.keyDecisions ?? 'Key Decisions';
 
   return (
     <Card variant="dark" hover as="article" className="overflow-hidden">
@@ -49,7 +50,7 @@ export default function CaseStudyCard({ caseStudy }) {
           {decisions && (
             <div>
               <BlockLabel icon={Lightbulb} color="text-violet-300">
-                Keputusan Kunci · Key Decisions
+                {keyDecisionsLabel}
               </BlockLabel>
               <div className="space-y-3">
                 {decisions.map((decision) => (

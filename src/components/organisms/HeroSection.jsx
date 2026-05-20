@@ -1,9 +1,10 @@
 import { Terminal, Handshake, ArrowRight, Mail } from 'lucide-react';
 import { Badge, Button } from '../atoms';
 import { StatCard } from '../molecules';
-import { heroStats } from '../../data';
 import { profileImage } from '../../assets/images';
 import { CONTACT } from '../../constants/site';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../i18n';
 
 /** Circular profile avatar with glow ring and an availability pill. */
 function ProfileAvatar() {
@@ -44,6 +45,9 @@ function ProfileAvatar() {
 
 /** Landing hero: intro copy, primary CTAs, profile avatar, and key metrics. */
 export default function HeroSection() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <section
       id="beranda"
@@ -52,39 +56,35 @@ export default function HeroSection() {
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-12">
         <div className="lg:col-span-7 order-2 lg:order-1">
           <Badge variant="status" className="mb-6">
-            Terbuka untuk kolaborasi · Open to collaboration
+            {t.hero.statusBadge}
           </Badge>
 
           <Badge icon={Terminal} className="mb-4">
-            Halo Dunia, Saya
+            {t.hero.greeting}
           </Badge>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4">
             Ghany Abdillah Ersa.
           </h1>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-400 mb-6 leading-tight">
-            Saya buat organisasi Anda bergerak lebih cepat dengan teknologi.
+            {t.hero.headline}
           </h2>
           <p className="text-lg text-slate-400 mb-8 leading-relaxed">
             <span className="text-slate-200 font-semibold">
               Product Engineer · Fullstack JavaScript
             </span>{' '}
-            - saya menggantikan proses manual dengan sistem yang benar-benar dipakai.
-            Di FIFGROUP (ASTRA) saya bangun sistem manajemen aset yang memangkas kerja
-            administratif lintas cabang. Di Sekolah.mu saya jaga modul asesmen untuk
-            jutaan kandidat tetap stabil tiap rilis. Di EM Apps saya pimpin produk yang
-            dipakai 20K+ mahasiswa. Semuanya dimulai dari masalah nyata - bukan asumsi.
+            - {t.hero.bio}
           </p>
 
           <div className="flex flex-wrap gap-3">
             <Button href="#kolaborasi" variant="primary" icon={Handshake}>
-              Ajak Berkolaborasi
+              {t.hero.btnCollaborate}
             </Button>
             <Button href="#case-study" variant="secondary" icon={ArrowRight}>
-              Lihat Case Study
+              {t.hero.btnCaseStudy}
             </Button>
             <Button href={`mailto:${CONTACT.email}`} variant="ghost" icon={Mail}>
-              Email
+              {t.hero.btnEmail}
             </Button>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function HeroSection() {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {heroStats.map((stat) => (
+        {t.stats.map((stat) => (
           <StatCard key={stat.label} stat={stat} />
         ))}
       </div>

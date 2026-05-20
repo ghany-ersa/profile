@@ -1,19 +1,29 @@
 import { FlaskConical } from 'lucide-react';
 import { Container, Section, SectionHeading } from '../atoms';
 import { ExperimentCard } from '../molecules';
-import { experiments } from '../../data';
+import { experiments as experimentsBase } from '../../data';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../i18n';
 
 /** "Lab & Eksplorasi" - side projects and technology experiments. */
 export default function LabSection() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
+  const experiments = experimentsBase.map((exp, i) => ({
+    ...exp,
+    ...t.experiments[i],
+  }));
+
   return (
     <Section id="lab">
       <Container>
         <SectionHeading
           align="center"
-          eyebrow="Lab & Eksplorasi"
+          eyebrow={t.lab.eyebrow}
           eyebrowIcon={FlaskConical}
-          title="Tetap Penasaran, Tetap Bereksperimen"
-          description="Side project & eksplorasi teknologi di luar pekerjaan utama - cara saya menjaga rasa ingin tahu dan menguji ide baru sebelum membawanya ke proyek nyata."
+          title={t.lab.title}
+          description={t.lab.description}
         />
 
         <div className="grid md:grid-cols-2 gap-6">

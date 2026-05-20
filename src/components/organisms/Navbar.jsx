@@ -2,13 +2,43 @@ import { useState } from 'react';
 import { Terminal, Menu, X } from 'lucide-react';
 import { Container } from '../atoms';
 import { NavLink } from '../molecules';
-import { navItems, sectionIds } from '../../data';
+import { sectionIds } from '../../data';
 import { useActiveSection } from '../../hooks/useActiveSection';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../i18n';
+
+/** Language toggle button EN / ID */
+function LangToggle() {
+  const { lang, toggle } = useLanguage();
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      className="flex items-center gap-1 text-xs font-mono font-semibold px-2.5 py-1 rounded-md border border-slate-700 hover:border-cyan-500/50 text-slate-400 hover:text-cyan-300 transition-colors"
+      aria-label="Toggle language"
+    >
+      <span className={lang === 'id' ? 'text-cyan-400' : 'text-slate-500'}>ID</span>
+      <span className="text-slate-600">/</span>
+      <span className={lang === 'en' ? 'text-cyan-400' : 'text-slate-500'}>EN</span>
+    </button>
+  );
+}
 
 /** Fixed top navigation with scroll-spy and a mobile dropdown menu. */
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useActiveSection(sectionIds, 'beranda');
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
+  const navItems = [
+    { id: 'beranda', name: t.nav.beranda },
+    { id: 'tentang', name: t.nav.tentang },
+    { id: 'case-study', name: t.nav.caseStudy },
+    { id: 'pengalaman', name: t.nav.pengalaman },
+    { id: 'lab', name: t.nav.lab },
+    { id: 'kolaborasi', name: t.nav.kolaborasi },
+  ];
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -28,7 +58,7 @@ export default function Navbar() {
           </button>
 
           {/* desktop links */}
-          <div className="hidden md:flex items-baseline space-x-6">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <NavLink
                 key={item.id}
@@ -36,17 +66,21 @@ export default function Navbar() {
                 isActive={activeSection === item.id}
               />
             ))}
+            <LangToggle />
           </div>
 
-          {/* mobile toggle */}
-          <button
-            type="button"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            aria-label="Toggle navigation menu"
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* mobile: lang toggle + hamburger */}
+          <div className="md:hidden flex items-center gap-2">
+            <LangToggle />
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-label="Toggle navigation menu"
+              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </Container>
 

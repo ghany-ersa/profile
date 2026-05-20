@@ -11,13 +11,8 @@ import shiftacademy from './projects/shiftacademy.jpg';
 import nikaah from './projects/nikaahid.jpg';
 import emapps from './projects/emapps.jpg';
 
-// Foto profil:
-// 1. Taruh file di src/assets/images/profile/ (mis. ghany.jpg)
-// 2. Uncomment baris import & nilai profile di bawah.
-// 3. Selama belum ada, hero akan menampilkan inisial "GE" sebagai fallback.
-import ghany from './profile/ghany.jpg';
-
-export const profileImage = ghany;
+// Foto profil disimpan di public/ agar path-nya statis dan cocok dengan preload di index.html.
+export const profileImage = '/profile/ghany.jpg';
 
 export const projectImages = {
   talentics,

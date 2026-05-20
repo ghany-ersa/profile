@@ -3,7 +3,7 @@ import { Badge, Container, Section } from '../atoms';
 import { CaseStudyCard } from '../molecules';
 import { caseStudies } from '../../data';
 
-/** "Case Study Terpilih" — featured projects in Problem/Action/Result form. */
+/** "Case Study Terpilih" - featured projects in Problem/Action/Result form. */
 export default function CaseStudySection() {
   return (
     <Section id="case-study" bordered className="bg-slate-900/40">

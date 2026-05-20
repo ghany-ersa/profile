@@ -4,7 +4,7 @@ import { cn } from '../../utils/cn';
 
 /**
  * Generic icon + title + description card. Drives the services grid and
- * the collaboration-path steps — they share the same shape.
+ * the collaboration-path steps - they share the same shape.
  *
  * @param {{icon: string, title: string, description?: string, body?: string, points?: string[]}} item
  * @param {'card'|'plain'} [layout] - 'card' = bordered surface, 'plain' = bare column.

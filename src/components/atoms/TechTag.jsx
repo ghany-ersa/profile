@@ -1,5 +1,5 @@
 /**
- * Small cyan-tinted technology chip — used for project, case-study,
+ * Small cyan-tinted technology chip - used for project, case-study,
  * and experiment tech stacks.
  */
 export default function TechTag({ children }) {

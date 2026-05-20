@@ -2,7 +2,7 @@ import { Container, Section } from '../atoms';
 import { TimelineEntry } from '../molecules';
 import { experiences } from '../../data';
 
-/** "Pengalaman & Karya" — a vertical timeline of work experience. */
+/** "Pengalaman & Karya" - a vertical timeline of work experience. */
 export default function ExperienceSection() {
   return (
     <Section id="pengalaman">

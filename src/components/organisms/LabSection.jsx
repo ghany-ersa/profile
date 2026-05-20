@@ -3,7 +3,7 @@ import { Container, Section, SectionHeading } from '../atoms';
 import { ExperimentCard } from '../molecules';
 import { experiments } from '../../data';
 
-/** "Lab & Eksplorasi" — side projects and technology experiments. */
+/** "Lab & Eksplorasi" - side projects and technology experiments. */
 export default function LabSection() {
   return (
     <Section id="lab">

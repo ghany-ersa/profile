@@ -1,4 +1,4 @@
-// Organisms — full page sections composed of molecules and atoms.
+// Organisms - full page sections composed of molecules and atoms.
 // Each owns its own data import; pages just arrange them.
 export { default as Navbar } from './Navbar';
 export { default as HeroSection } from './HeroSection';

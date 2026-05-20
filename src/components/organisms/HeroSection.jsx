@@ -69,11 +69,11 @@ export default function HeroSection() {
             <span className="text-slate-200 font-semibold">
               Product Engineer · Fullstack JavaScript
             </span>{' '}
-            — saya menggantikan proses manual dengan sistem yang benar-benar dipakai.
+            - saya menggantikan proses manual dengan sistem yang benar-benar dipakai.
             Di FIFGROUP (ASTRA) saya bangun sistem manajemen aset yang memangkas kerja
             administratif lintas cabang. Di Sekolah.mu saya jaga modul asesmen untuk
             jutaan kandidat tetap stabil tiap rilis. Di EM Apps saya pimpin produk yang
-            dipakai 20K+ mahasiswa. Semuanya dimulai dari masalah nyata — bukan asumsi.
+            dipakai 20K+ mahasiswa. Semuanya dimulai dari masalah nyata - bukan asumsi.
           </p>
 
           <div className="flex flex-wrap gap-3">

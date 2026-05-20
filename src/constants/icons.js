@@ -1,4 +1,4 @@
-// Icon registry — maps string keys to lucide-react components.
+// Icon registry - maps string keys to lucide-react components.
 // Data files reference icons by name (a plain string) so the data layer
 // stays free of component imports; UI components resolve names via getIcon().
 import {

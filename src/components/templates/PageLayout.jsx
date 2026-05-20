@@ -2,7 +2,7 @@ import { Navbar, Footer } from '../organisms';
 
 /**
  * Page shell: fixed navbar, a `<main>` content slot, and the footer.
- * Templates define structure only — pages fill the `children` slot.
+ * Templates define structure only - pages fill the `children` slot.
  */
 export default function PageLayout({ children }) {
   return (

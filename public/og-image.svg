@@ -42,7 +42,7 @@
   <text x="480" y="538" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#64748b">Shipped together</text>
 
   <!-- URL -->
-  <text x="1120" y="570" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#475569" text-anchor="end">ghanyersa.github.io/ghany-folio</text>
+  <text x="1120" y="570" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#475569" text-anchor="end">ghanyersa24.github.io/ghany-folio</text>
 
   <!-- Accent dot -->
   <circle cx="1140" cy="100" r="80" fill="#06b6d4" opacity="0.05"/>

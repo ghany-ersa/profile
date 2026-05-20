@@ -1,4 +1,4 @@
-# Arsitektur — Portfolio (Atomic Design)
+# Arsitektur - Portfolio (Atomic Design)
 
 Dokumen ini menjelaskan struktur kode setelah refactor.
 
@@ -8,7 +8,7 @@ Dokumen ini menjelaskan struktur kode setelah refactor.
 
 Atomic Design (Brad Frost) menyusun UI sebagai hierarki dari unit terkecil
 ke terbesar. Komponen di tingkat atas hanya boleh menyusun komponen di
-tingkat bawahnya — tidak pernah sebaliknya.
+tingkat bawahnya - tidak pernah sebaliknya.
 
 ```
 atoms → molecules → organisms → templates → pages
@@ -20,7 +20,7 @@ atoms → molecules → organisms → templates → pages
 | **Molecule**  | Gabungan beberapa atom dengan satu tujuan jelas       | `StatCard`, `NavLink`, `FeatureCard`           |
 | **Organism**  | Bagian halaman utuh, menyusun molecule + atom         | `HeroSection`, `Navbar`, `Footer`              |
 | **Template**  | Kerangka tata letak halaman, tanpa konten konkret     | `PageLayout`                                   |
-| **Page**      | Komposisi akhir — merangkai organism jadi satu layar  | `PortfolioPage`                                |
+| **Page**      | Komposisi akhir - merangkai organism jadi satu layar  | `PortfolioPage`                                |
 
 ---
 
@@ -32,7 +32,7 @@ src/
 ├── constants/          # Nilai statis lintas aplikasi
 │   ├── icons.js        #   Registry ikon: string → komponen lucide-react
 │   └── site.js         #   Link & kontak (email, WhatsApp, sosial media)
-├── data/               # LAPISAN KONTEN — semua teks portfolio
+├── data/               # LAPISAN KONTEN - semua teks portfolio
 │   ├── navigation.js   #   Nav items + daftar id section
 │   ├── profile.js      #   Hero stats + riwayat pendidikan
 │   ├── experiences.js  #   Riwayat pengalaman kerja
@@ -50,7 +50,7 @@ src/
 │   ├── organisms/      # 8 organism + barrel index.js
 │   └── templates/      # PageLayout + barrel index.js
 ├── pages/              # PortfolioPage + barrel index.js
-└── main.jsx            # Entry point — me-render <PortfolioPage />
+└── main.jsx            # Entry point - me-render <PortfolioPage />
 ```
 
 ---
@@ -79,7 +79,7 @@ import { Card, Button, IconBox } from '../atoms';   // ✅ satu baris
 ### 3.4 Komponen generik vs spesifik
 `FeatureCard` menggantikan **2 blok berulang** (services & langkah
 kolaborasi) karena keduanya berbentuk ikon + judul + deskripsi.
-Variasi diatur lewat props (`layout`, `align`, `iconSize`) — bukan
+Variasi diatur lewat props (`layout`, `align`, `iconSize`) - bukan
 menduplikasi markup.
 
 ### 3.5 Hook untuk logika stateful
@@ -88,7 +88,7 @@ dan hook bisa diuji / dipakai ulang secara terpisah. Listener scroll memakai
 `{ passive: true }` untuk performa.
 
 ### 3.6 Template vs Page
-`PageLayout` (template) memegang **struktur** — navbar, `<main>`, footer.
+`PageLayout` (template) memegang **struktur** - navbar, `<main>`, footer.
 `PortfolioPage` (page) memegang **urutan konten**. Mengubah urutan section
 cukup memindah satu baris di `PortfolioPage.jsx`.
 
@@ -101,10 +101,10 @@ cukup memindah satu baris di `PortfolioPage.jsx`.
 |------------------|---------------------------------------------------------------|
 | `Container`      | Pembungkus max-width + padding horizontal konsisten           |
 | `Section`        | `<section>` dengan anchor id & ritme vertikal seragam         |
-| `Card`           | Permukaan berbingkai — basis semua kartu (varian + hover)     |
+| `Card`           | Permukaan berbingkai - basis semua kartu (varian + hover)     |
 | `Button`         | Link bergaya tombol (4 varian)                                |
 | `IconBox`        | Kotak bertint yang membingkai ikon                            |
-| `Badge`          | Pil kecil — eyebrow heading / status "Available"              |
+| `Badge`          | Pil kecil - eyebrow heading / status "Available"              |
 | `SectionHeading` | Judul section (layout `left` & `center`)                      |
 | `TechTag`        | Chip teknologi/skill (tone `cyan` & `slate`)                  |
 | `ListItem`       | Satu baris bullet (marker check / arrow)                      |
@@ -134,16 +134,16 @@ Tiap organism meng-import datanya sendiri dari `src/data/`.
 
 ## 5. Praktik Clean Code yang Diterapkan
 
-- **Single Responsibility** — tiap komponen punya satu alasan untuk berubah.
-- **DRY** — pola berulang (container, kartu, bullet, ikon) diangkat jadi atom;
+- **Single Responsibility** - tiap komponen punya satu alasan untuk berubah.
+- **DRY** - pola berulang (container, kartu, bullet, ikon) diangkat jadi atom;
   `FeatureCard` menghapus 2 duplikasi blok.
-- **Penamaan konsisten** — komponen `PascalCase`, file komponen `.jsx`,
+- **Penamaan konsisten** - komponen `PascalCase`, file komponen `.jsx`,
   data/util/hook `camelCase.js`, section diberi sufiks `Section`.
-- **Komposisi di atas konfigurasi** — variasi lewat props, bukan flag rumit.
-- **Pure data layer** — `src/data/` bebas dari import React/komponen.
-- **Aksesibilitas** — `aria-label` pada tombol ikon, `sr-only` pada link
+- **Komposisi di atas konfigurasi** - variasi lewat props, bukan flag rumit.
+- **Pure data layer** - `src/data/` bebas dari import React/komponen.
+- **Aksesibilitas** - `aria-label` pada tombol ikon, `sr-only` pada link
   sosial, `loading="lazy"` pada gambar proyek.
-- **Komentar bermakna** — tiap file diawali JSDoc singkat tentang tujuannya.
+- **Komentar bermakna** - tiap file diawali JSDoc singkat tentang tujuannya.
 
 ---
 
@@ -164,6 +164,6 @@ Tiap organism meng-import datanya sendiri dari `src/data/`.
 
 ```bash
 npm run dev      # mode pengembangan
-npm run build    # build produksi — lulus tanpa error
+npm run build    # build produksi - lulus tanpa error
 npm run preview  # pratinjau hasil build
 ```

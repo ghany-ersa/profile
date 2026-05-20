@@ -1,7 +1,7 @@
 import { cn } from '../../utils/cn';
 
 /**
- * Bordered surface panel — the base for every card on the page.
+ * Bordered surface panel - the base for every card on the page.
  *
  * @param {'panel'|'dark'|'muted'} [variant] - background treatment.
  * @param {boolean} [hover] - adds the cyan border-highlight on hover.

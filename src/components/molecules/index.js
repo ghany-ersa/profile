@@ -1,4 +1,4 @@
-// Molecules — small compositions of atoms with a single, focused purpose.
+// Molecules - small compositions of atoms with a single, focused purpose.
 export { default as CaseStudyCard } from './CaseStudyCard';
 export { default as ContactInfo } from './ContactInfo';
 export { default as DecisionItem } from './DecisionItem';

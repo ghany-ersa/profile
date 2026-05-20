@@ -2,7 +2,7 @@ import { Layout } from 'lucide-react';
 import { TechTag } from '../atoms';
 
 /**
- * Inline project preview shown under a timeline experience entry —
+ * Inline project preview shown under a timeline experience entry -
  * image on one side, title + description + tech stack on the other.
  *
  * @param {{title: string, description: string, image: string, tech: string[]}} project

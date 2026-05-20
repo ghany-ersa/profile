@@ -1,4 +1,4 @@
-// Barrel — single import surface for the content/data layer.
+// Barrel - single import surface for the content/data layer.
 export { navItems, sectionIds } from './navigation';
 export { heroStats, education } from './profile';
 export { experiences } from './experiences';

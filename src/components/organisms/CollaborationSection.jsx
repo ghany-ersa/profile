@@ -36,7 +36,7 @@ function ContactCTA() {
   );
 }
 
-/** "Kolaborasi" — services offered, the working process, and the contact CTA. */
+/** "Kolaborasi" - services offered, the working process, and the contact CTA. */
 export default function CollaborationSection() {
   return (
     <Section id="kolaborasi" className="py-24">
@@ -46,7 +46,7 @@ export default function CollaborationSection() {
           eyebrow="Let's move faster together"
           eyebrowIcon={Handshake}
           title="Siap Percepat Organisasi Anda?"
-          description="Ada proses yang terasa lambat, sistem yang belum terintegrasi, atau peluang otomasi yang belum tersentuh? Saya terbuka untuk diskusi — proyek penuh waktu, kontrak, freelance, atau konsultasi jangka pendek."
+          description="Ada proses yang terasa lambat, sistem yang belum terintegrasi, atau peluang otomasi yang belum tersentuh? Saya terbuka untuk diskusi - proyek penuh waktu, kontrak, freelance, atau konsultasi jangka pendek."
           className="mb-16"
         />
 

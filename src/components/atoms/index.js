@@ -1,4 +1,4 @@
-// Atoms — smallest UI building blocks. No business logic, no data imports.
+// Atoms - smallest UI building blocks. No business logic, no data imports.
 export { default as Badge } from './Badge';
 export { default as Button } from './Button';
 export { default as Card } from './Card';

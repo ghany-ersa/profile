@@ -18,7 +18,7 @@ function ProfileLink({ href, icon: Icon, label }) {
   );
 }
 
-/** "Tentang Saya" — narrative bio plus an education/background card. */
+/** "Tentang Saya" - narrative bio plus an education/background card. */
 export default function AboutSection() {
   return (
     <Section id="tentang" bordered className="bg-slate-900/50">
@@ -31,7 +31,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
             <p>
-              Kebanyakan organisasi tidak lambat karena kurang orang — mereka lambat karena{' '}
+              Kebanyakan organisasi tidak lambat karena kurang orang - mereka lambat karena{' '}
               <strong className="text-cyan-400">proses yang belum tersentuh teknologi</strong>.
               Approval manual, data yang tersebar, laporan yang dikerjakan ulang setiap minggu.
               Di situlah saya masuk.
@@ -50,7 +50,7 @@ export default function AboutSection() {
               selalu sama: temukan hambatan nyata, bangun solusinya, ukur hasilnya.
             </p>
             <p>
-              Saya juga mengintegrasikan AI ke dalam workflow sehari-hari — bukan sebagai
+              Saya juga mengintegrasikan AI ke dalam workflow sehari-hari - bukan sebagai
               eksperimen, tapi sebagai{' '}
               <strong className="text-cyan-400">multiplier produktivitas tim</strong>. Saat ini
               menempuh Magister Sistem Informasi di Universitas Brawijaya untuk memperdalam

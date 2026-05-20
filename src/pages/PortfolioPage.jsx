@@ -9,7 +9,7 @@ import {
 } from '../components/organisms';
 
 /**
- * The portfolio page — arranges section organisms in display order.
+ * The portfolio page - arranges section organisms in display order.
  * Pure composition: no markup, no logic, no data. Each organism is
  * self-contained, so reordering the page is a one-line change here.
  */

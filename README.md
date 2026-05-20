@@ -67,8 +67,8 @@ This site presents a curated overview of my work as a **Fullstack JavaScript Eng
 
 ```bash
 # Clone the repository
-git clone https://github.com/ghanyersa/ghany-folio.git
-cd ghany-folio
+git clone https://github.com/ghanyersa/profile.git
+cd profile
 
 # Install dependencies
 npm install
@@ -87,7 +87,7 @@ npm install
 ## Project Structure
 
 ```
-ghany-folio/
+profile/
 ├── .github/workflows/
 │   └── static.yml             # GitHub Pages deployment workflow
 ├── index.html                 # Entry HTML + Google Fonts preload

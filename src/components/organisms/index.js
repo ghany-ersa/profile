@@ -2,12 +2,9 @@
 // Each owns its own data import; pages just arrange them.
 export { default as Navbar } from './Navbar';
 export { default as HeroSection } from './HeroSection';
-export { default as ValuePropsSection } from './ValuePropsSection';
 export { default as AboutSection } from './AboutSection';
 export { default as ExperienceSection } from './ExperienceSection';
 export { default as CaseStudySection } from './CaseStudySection';
-export { default as SkillsSection } from './SkillsSection';
-export { default as AIWorkflowSection } from './AIWorkflowSection';
 export { default as LabSection } from './LabSection';
 export { default as CollaborationSection } from './CollaborationSection';
 export { default as Footer } from './Footer';

@@ -19,11 +19,6 @@ export default function ExperienceSection() {
             <TimelineEntry key={experience.company} experience={experience} />
           ))}
         </div>
-
-        <p className="mt-16 text-center text-slate-500 text-sm">
-          *Gambar portofolio merupakan ilustrasi (placeholder) - dapat diganti dengan
-          tangkapan layar asli.
-        </p>
       </Container>
     </Section>
   );

@@ -3,8 +3,8 @@ import { Card, IconBox, ListItem } from '../atoms';
 import { cn } from '../../utils/cn';
 
 /**
- * Generic icon + title + description card. Drives value props, services,
- * AI-workflow items, and collaboration steps — they share the same shape.
+ * Generic icon + title + description card. Drives the services grid and
+ * the collaboration-path steps — they share the same shape.
  *
  * @param {{icon: string, title: string, description?: string, body?: string, points?: string[]}} item
  * @param {'card'|'plain'} [layout] - 'card' = bordered surface, 'plain' = bare column.

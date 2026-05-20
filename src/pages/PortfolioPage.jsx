@@ -1,12 +1,9 @@
 import { PageLayout } from '../components/templates';
 import {
   HeroSection,
-  ValuePropsSection,
   AboutSection,
   ExperienceSection,
   CaseStudySection,
-  SkillsSection,
-  AIWorkflowSection,
   LabSection,
   CollaborationSection,
 } from '../components/organisms';
@@ -19,13 +16,11 @@ import {
 export default function PortfolioPage() {
   return (
     <PageLayout>
+      {/* Alur: Perkenalan → Bukti → Kredensial → Eksplorasi → CTA */}
       <HeroSection />
-      <ValuePropsSection />
       <AboutSection />
-      <ExperienceSection />
       <CaseStudySection />
-      <SkillsSection />
-      <AIWorkflowSection />
+      <ExperienceSection />
       <LabSection />
       <CollaborationSection />
     </PageLayout>

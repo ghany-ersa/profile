@@ -34,13 +34,11 @@ src/
 │   └── site.js         #   Link & kontak (email, WhatsApp, sosial media)
 ├── data/               # LAPISAN KONTEN — semua teks portfolio
 │   ├── navigation.js   #   Nav items + daftar id section
-│   ├── profile.js      #   Hero stats, pendidikan, skill
+│   ├── profile.js      #   Hero stats + riwayat pendidikan
 │   ├── experiences.js  #   Riwayat pengalaman kerja
 │   ├── caseStudies.js  #   Studi kasus (Problem/Action/Result)
 │   ├── services.js     #   Layanan + alur kolaborasi
 │   ├── experiments.js  #   Side project / Lab
-│   ├── valueProps.js   #   Highlight value di bawah hero
-│   ├── aiWorkflow.js   #   Item AI-Augmented Workflow
 │   └── index.js        #   Barrel export
 ├── hooks/              # Custom React hooks
 │   └── useActiveSection.js   # Scroll-spy untuk highlight nav aktif
@@ -48,8 +46,8 @@ src/
 │   └── cn.js           #   Penggabung className kondisional
 ├── components/
 │   ├── atoms/          # 9 atom + barrel index.js
-│   ├── molecules/      # 12 molecule + barrel index.js
-│   ├── organisms/      # 11 organism + barrel index.js
+│   ├── molecules/      # 11 molecule + barrel index.js
+│   ├── organisms/      # 8 organism + barrel index.js
 │   └── templates/      # PageLayout + barrel index.js
 ├── pages/              # PortfolioPage + barrel index.js
 └── main.jsx            # Entry point — me-render <PortfolioPage />
@@ -79,10 +77,10 @@ import { Card, Button, IconBox } from '../atoms';   // ✅ satu baris
 ```
 
 ### 3.4 Komponen generik vs spesifik
-`FeatureCard` menggantikan **4 blok berulang** (value props, services,
-AI workflow, langkah kolaborasi) karena semuanya berbentuk
-ikon + judul + deskripsi. Variasi diatur lewat props (`layout`, `align`,
-`iconSize`) — bukan menduplikasi markup.
+`FeatureCard` menggantikan **2 blok berulang** (services & langkah
+kolaborasi) karena keduanya berbentuk ikon + judul + deskripsi.
+Variasi diatur lewat props (`layout`, `align`, `iconSize`) — bukan
+menduplikasi markup.
 
 ### 3.5 Hook untuk logika stateful
 Logika scroll-spy diekstrak ke `useActiveSection`. `Navbar` jadi deklaratif,
@@ -116,8 +114,7 @@ cukup memindah satu baris di `PortfolioPage.jsx`.
 |-----------------|---------------------------------------------------------|
 | `NavLink`       | Satu link navigasi (varian desktop & mobile)            |
 | `StatCard`      | Satu metrik hero                                        |
-| `FeatureCard`   | Kartu ikon+judul+deskripsi generik (dipakai 4 section)  |
-| `SkillCard`     | Satu kategori pada grid keahlian                        |
+| `FeatureCard`   | Kartu ikon+judul+deskripsi generik (services & langkah kolaborasi) |
 | `ProjectCard`   | Pratinjau proyek di bawah entri timeline                |
 | `TimelineEntry` | Satu entri pada timeline pengalaman                     |
 | `CaseStudyCard` | Satu studi kasus utuh (Problem→Action→Result)           |
@@ -128,9 +125,9 @@ cukup memindah satu baris di `PortfolioPage.jsx`.
 | `ContactInfo`   | Kolom kontak (lokasi, telepon, email) di footer         |
 
 ### Organisms (`components/organisms/`)
-Sebelas section halaman: `Navbar`, `HeroSection`, `ValuePropsSection`,
-`AboutSection`, `ExperienceSection`, `CaseStudySection`, `SkillsSection`,
-`AIWorkflowSection`, `LabSection`, `CollaborationSection`, `Footer`.
+Delapan section halaman: `Navbar`, `HeroSection`, `AboutSection`,
+`ExperienceSection`, `CaseStudySection`, `LabSection`,
+`CollaborationSection`, `Footer`.
 Tiap organism meng-import datanya sendiri dari `src/data/`.
 
 ---
@@ -139,7 +136,7 @@ Tiap organism meng-import datanya sendiri dari `src/data/`.
 
 - **Single Responsibility** — tiap komponen punya satu alasan untuk berubah.
 - **DRY** — pola berulang (container, kartu, bullet, ikon) diangkat jadi atom;
-  `FeatureCard` menghapus 4 duplikasi blok.
+  `FeatureCard` menghapus 2 duplikasi blok.
 - **Penamaan konsisten** — komponen `PascalCase`, file komponen `.jsx`,
   data/util/hook `camelCase.js`, section diberi sufiks `Section`.
 - **Komposisi di atas konfigurasi** — variasi lewat props, bukan flag rumit.

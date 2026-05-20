@@ -1,25 +1,10 @@
-import { cn } from '../../utils/cn';
-
 /**
- * Small technology/skill chip.
- *  - tone="cyan"  : cyan-tinted, used for project & case-study stacks.
- *  - tone="slate" : neutral, interactive, used in the skills grid.
+ * Small cyan-tinted technology chip — used for project, case-study,
+ * and experiment tech stacks.
  */
-const TONES = {
-  cyan: 'px-2.5 py-1 bg-cyan-950/30 text-cyan-300 border-cyan-900/50',
-  slate:
-    'px-3 py-1.5 bg-slate-800 text-slate-300 border-slate-700/50 ' +
-    'hover:bg-slate-700 hover:text-cyan-300 cursor-default',
-};
-
-export default function TechTag({ tone = 'cyan', children }) {
+export default function TechTag({ children }) {
   return (
-    <span
-      className={cn(
-        'rounded text-xs font-medium border transition-colors duration-300',
-        TONES[tone],
-      )}
-    >
+    <span className="px-2.5 py-1 rounded text-xs font-medium border bg-cyan-950/30 text-cyan-300 border-cyan-900/50">
       {children}
     </span>
   );

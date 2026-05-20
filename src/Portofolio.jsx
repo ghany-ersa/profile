@@ -7,7 +7,6 @@ import {
   BookOpen,
   Briefcase,
   Code2,
-  Award,
   Menu,
   X,
   Terminal,
@@ -33,7 +32,7 @@ import {
   ExternalLink,
   Hand,
 } from 'lucide-react';
-import { projectImages, awardImages, profileImage } from './assets/images';
+import { projectImages, profileImage } from './assets/images';
 
 const WHATSAPP_URL = 'https://wa.me/6282164028264?text=Halo%20Ghany%2C%20saya%20ingin%20mendiskusikan%20kolaborasi.';
 const GITHUB_URL = 'https://github.com/ghanyersa'; // TODO: replace with your real GitHub URL
@@ -340,36 +339,6 @@ const Portofolio = () => {
     },
   ];
 
-  const awards = [
-    {
-      title: 'Top 50 Leader - OLF',
-      issuer: 'Universitas Negeri Malang',
-      description:
-        'Membimbing siswa Pramuka mencapai Top 50 Leader tingkat nasional selama dua tahun berturut-turut - bukti pengembangan kepemimpinan yang berkelanjutan.',
-      image: awardImages.topLeaderOlf,
-    },
-    {
-      title: 'Juara 2 Business Plan',
-      issuer: 'Wirausaha on Week Competition',
-      description:
-        'Memimpin tim merancang ide bisnis berbasis lingkungan dengan teknologi sebagai enabler transformasi.',
-      image: awardImages.businessPlan,
-    },
-    {
-      title: 'Juara 2 Teknologi Inovasi',
-      issuer: 'Wirausaha on Week Competition',
-      description:
-        'Memimpin tim mengembangkan solusi berbasis machine learning untuk identifikasi penyakit di bidang medis.',
-      image: awardImages.teknologiInovasi,
-    },
-    {
-      title: 'Juara 1 Business Model Canvas',
-      issuer: 'Jatim Open 2023',
-      description:
-        'Menciptakan ide bisnis berbasis lingkungan dengan teknologi sebagai instrumen transformasi.',
-      image: awardImages.bmcJatimOpen,
-    },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1013,41 +982,6 @@ const Portofolio = () => {
           </div>
         </section>
 
-        <section id="penghargaan" className="py-20 bg-slate-900/30 border-y border-slate-800">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-4 mb-16">
-              <h2 className="text-3xl font-bold text-white">Penghargaan & Kepemimpinan</h2>
-              <div className="h-px bg-slate-700 flex-grow max-w-xs"></div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {awards.map((award, idx) => (
-                <div
-                  key={idx}
-                  className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-900/20 transition-all duration-300 group flex flex-col"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={award.image}
-                      alt={award.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-sm p-2 rounded-lg border border-slate-700">
-                      <Award className="w-6 h-6 text-cyan-400" />
-                    </div>
-                  </div>
-
-                  <div className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold text-white mb-2">{award.title}</h3>
-                    <p className="text-cyan-400 text-sm font-medium mb-4">{award.issuer}</p>
-                    <p className="text-slate-400 leading-relaxed">{award.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section id="kolaborasi" className="py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -10,7 +10,7 @@ export const experiments = [
     links: [
       {
         label: 'Live Demo',
-        href: 'https://ghanyersa24.github.io/VR-menggunakan-A-Frame/webar-handtracking.html',
+        href: 'https://ghany-ersa.github.io/immersive-learning/webar-handtracking.html',
       },
       {
         label: 'Source Code',

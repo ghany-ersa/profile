@@ -444,15 +444,15 @@ const Portofolio = () => {
                 Ghany Abdillah Ersa.
               </h1>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-400 mb-6 leading-tight">
-                Saya bantu tim merilis produk - dan mencetak engineer yang melanjutkannya.
+                Saya buat organisasi Anda bergerak lebih cepat dengan teknologi.
               </h2>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-                <span className="text-slate-200 font-semibold">Product Engineer &amp; Tech Mentor</span>{' '}
-                - fullstack JavaScript dengan fokus <em>frontend</em>. Selama 5+ tahun saya merilis
-                fitur enterprise di Sekolah.mu, membangun sistem internal end-to-end di FIFGROUP
-                (ASTRA), memimpin produk dengan 20K+ pengguna, dan membimbing ratusan engineer
-                lewat 500+ jam mengajar. Saya menggunakan AI sebagai <em>leverage</em>, bukan
-                pengganti judgment.
+                <span className="text-slate-200 font-semibold">Product Engineer · Fullstack JavaScript</span>{' '}
+                — saya menggantikan proses manual dengan sistem yang benar-benar dipakai.
+                Di FIFGROUP (ASTRA) saya bangun sistem manajemen aset yang memangkas kerja
+                administratif lintas cabang. Di Sekolah.mu saya jaga modul asesmen untuk
+                jutaan kandidat tetap stabil tiap rilis. Di EM Apps saya pimpin produk yang
+                dipakai 20K+ mahasiswa. Semuanya dimulai dari masalah nyata — bukan asumsi.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -536,6 +536,43 @@ const Portofolio = () => {
           </div>
         </section>
 
+        <section className="py-14 border-y border-cyan-500/20 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-xs font-mono text-cyan-500/60 uppercase tracking-widest mb-8">
+              Bukan sekadar membuat aplikasi —
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6 text-center">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mx-auto">
+                  <Zap className="w-5 h-5 text-cyan-400" />
+                </div>
+                <h3 className="text-white font-bold text-lg">Percepat Operasional</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Saya identifikasi bottleneck di alur kerja Anda, lalu bangun solusi teknologi yang memangkas waktu proses — bukan hanya fitur baru.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mx-auto">
+                  <Brain className="w-5 h-5 text-cyan-400" />
+                </div>
+                <h3 className="text-white font-bold text-lg">AI sebagai Leverage</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Mengintegrasikan AI ke dalam workflow nyata — bukan eksperimen, tapi alat yang langsung menghasilkan output terukur untuk tim Anda.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mx-auto">
+                  <TrendingUp className="w-5 h-5 text-cyan-400" />
+                </div>
+                <h3 className="text-white font-bold text-lg">Sistem yang Tumbuh</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Setiap solusi saya rancang agar tim Anda bisa melanjutkan sendiri — bukan ketergantungan, tapi kapabilitas yang tertinggal di organisasi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="tentang" className="py-20 bg-slate-900/50 border-y border-slate-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-4 mb-12">
@@ -546,25 +583,24 @@ const Portofolio = () => {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
                 <p>
-                  Di era ketika menulis kode menjadi komoditas, yang langka adalah engineer yang
-                  bisa <strong className="text-cyan-400">menerjemahkan masalah bisnis</strong>,{' '}
-                  <strong className="text-cyan-400">mengambil keputusan arsitektural</strong>, dan{' '}
-                  <strong className="text-cyan-400">memimpin manusia di sekitarnya</strong>. Itu
-                  yang saya latih sejak 2020.
+                  Kebanyakan organisasi tidak lambat karena kurang orang — mereka lambat karena{' '}
+                  <strong className="text-cyan-400">proses yang belum tersentuh teknologi</strong>.
+                  Approval manual, data yang tersebar, laporan yang dikerjakan ulang setiap minggu.
+                  Di situlah saya masuk.
                 </p>
                 <p>
-                  Saya pernah jadi <strong className="text-cyan-400">solo programmer end-to-end</strong>{' '}
-                  di FIFGROUP (ASTRA), <strong className="text-cyan-400">frontend engineer</strong>{' '}
-                  yang menjaga modul asesmen jutaan kandidat di Sekolah.mu, dan{' '}
-                  <strong className="text-cyan-400">product owner</strong> untuk aplikasi mahasiswa
-                  20K+ pengguna. Pola kerja saya sederhana: mulai dari masalah nyata, ambil
-                  keputusan, ukur hasilnya, ajarkan ke orang berikutnya.
+                  Selama 5+ tahun saya membangun{' '}
+                  <strong className="text-cyan-400">sistem internal end-to-end di FIFGROUP (ASTRA)</strong>,
+                  menjaga <strong className="text-cyan-400">modul asesmen jutaan kandidat di Sekolah.mu</strong>,
+                  dan memimpin produk dengan <strong className="text-cyan-400">20K+ pengguna aktif</strong>.
+                  Pola kerjanya selalu sama: temukan hambatan nyata, bangun solusinya, ukur hasilnya.
                 </p>
                 <p>
-                  Saya juga membimbing engineer baru - 500+ jam mengajar bootcamp JavaScript dan
-                  pembicara webinar. Ini bagian yang AI belum bisa gantikan: membangun manusia,
-                  membentuk budaya tim. Saat ini saya juga menempuh Magister Sistem Informasi di
-                  Universitas Brawijaya untuk memperdalam sisi strategi & sistem.
+                  Saya juga mengintegrasikan AI ke dalam workflow sehari-hari — bukan sebagai
+                  eksperimen, tapi sebagai{' '}
+                  <strong className="text-cyan-400">multiplier produktivitas tim</strong>. Saat ini
+                  menempuh Magister Sistem Informasi di Universitas Brawijaya untuk memperdalam
+                  sisi strategi & transformasi digital.
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-2">
@@ -987,15 +1023,15 @@ const Portofolio = () => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <p className="text-cyan-400 font-mono text-sm mb-3 flex items-center gap-2 justify-center">
-                <Handshake className="w-4 h-4" /> Let&apos;s build together
+                <Handshake className="w-4 h-4" /> Let&apos;s move faster together
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Mari Bangun Sesuatu yang Bermakna
+                Siap Percepat Organisasi Anda?
               </h2>
               <p className="text-slate-400 leading-relaxed">
-                Punya ide produk, butuh tangan ekstra untuk tim, atau mencari mentor untuk
-                engineer baru? Saya terbuka untuk proyek penuh waktu, kontrak, freelance, atau
-                kolaborasi jangka pendek.
+                Ada proses yang terasa lambat, sistem yang belum terintegrasi, atau peluang
+                otomasi yang belum tersentuh? Saya terbuka untuk diskusi — proyek penuh waktu,
+                kontrak, freelance, atau konsultasi jangka pendek.
               </p>
             </div>
 
